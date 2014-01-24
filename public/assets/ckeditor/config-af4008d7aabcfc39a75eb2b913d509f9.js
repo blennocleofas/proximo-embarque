@@ -1,0 +1,1 @@
+CKEDITOR.editorConfig=function(n){n.language="pt-BR",n.font_names="Arial;Times New Roman;Verdana;Open Sans"};

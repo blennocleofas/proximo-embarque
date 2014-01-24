@@ -1,0 +1,40 @@
+ <div class="modal" id="pacotes">
+ <div class="content">
+  <a class="close switch" gumby-trigger="|#pacotes"><i class="icon-cancel" /></i></a>
+ <div class="row">
+ 	<h3>Selecionar Pacotes.</h3>
+ <table class="striped rounded">
+  <thead>
+   <tr>
+    <th> Titulo do Pacote </th>
+    <th class="center"> Dias </th>
+    <th class="center"> Noites </th>
+    <th> Saindo de: </th>
+    <th> Voltado de: </th>
+    <th> Selecionar </th>
+  </tr>
+</thead>
+<tbody>
+
+<%= form_tag teste_path do %>
+	<%= hidden_field_tag "blenno[destino]", @destino.id %>
+  <% Pacote.all.each do |i| %>
+	 <tr>
+       <td><%= i.titulo %></td>
+       <td class="center" ><%= i.dias %></td>
+       <td class="center"><%= i.noites %></td>
+       <td><%= i.cidade_origem %> - (<%= i.aeroporto_ori %>) </td>
+       <td><%= i.cidade_destino %> - (<%= i.aeroporto_dest %>) </td>
+       <td><%= check_box_tag "blenno[valor][]", i.id %></td>
+
+     </tr>
+  <% end %>
+   </tbody>
+ </table>
+ 	 <div class="btn primary medium icon-left entypo icon-plus">
+   <%= button_tag  "Salvar" %>
+</div>
+  <% end %>
+</div>
+</div>
+</div>

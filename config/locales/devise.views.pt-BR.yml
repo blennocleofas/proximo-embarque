@@ -1,0 +1,45 @@
+pt-BR:
+  devise:
+    confirmations:
+      new:
+        title: Reenviar instruções de confirmação
+        submit: Reenviar instruções de confirmação
+      link: Não recebeu instruções de confirmação?
+    passwords:
+      edit:
+        title: Mudar sua senha
+        submit: Mudar minha senha
+      new:
+        title: Esqueceu sua senha?
+        submit: Me enviar instruções para reiniciar minha senha
+    registrations:
+      edit:
+        title: Editar 
+        update: Atualizar
+        password:
+          m_notchage: ( Deixe em branco para não mudar a senha )
+        confirm:
+          m_pass: ( Digite sua senha atual para confirmar as mudanças )
+        cancel:
+          title: Cancelar minha conta
+          message: Não está contente?
+          action: Cancelar minha conta
+          confirm: Tem certeza?
+        back: Voltar
+      new:
+        title: Registrar
+        submit: Registrar
+    sessions:
+      new:
+        title: Login
+        submit: Login
+        email: Seu Email
+        password: Sua senha
+        rem: Lembre-se de mim
+      link: Login com {provider}
+    unlocks:
+      new:
+        title: Reenviar instruções de desbloqueio
+        submit: Reenviar instruções de desbloqueio
+      link: Não recebeu instruções de desbloqueio?
+

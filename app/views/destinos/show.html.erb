@@ -1,0 +1,37 @@
+<%= render 'layouts/topo'%>
+
+<div class="site-destino" style="background: url('<%= cloudinary_url(@destino.capa , :width => 1980, :height => 230, :crop => :fill,:fetch_format => :auto,:x => 0,:y => 900)  %>') 100%;">
+
+	<div class="row">
+		<div class="five columns">
+			<div class="titulo-destino">
+				<h2><%= @destino.title %></h2>
+				<span class="desc"> <%= @destino.desc %> </span> 
+				<% if admin_signed_in? %>
+			<div class="up">
+			<%= cl_image_upload_tag(:image_id, :html => { :multiple => true,:class => "capa_upload" }) %>
+			<% end %>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="row">
+		<div class="seven columns destino-texto">
+			<%= 
+			# raw(Liquid::Template.parse(@destino.full_text).render("destino" => Destino.find(@destino.id)))
+			liquidize @destino.full_text, "destino" => @destino
+
+
+			%>
+		</div>
+		<div class="five columns destino-fotos">
+		</div>
+	</div>
+
+
+	
+
+
+
+					

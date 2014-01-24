@@ -1,0 +1,53 @@
+.topo{
+	background : -moz-linear-gradient(0% 50% 0deg,rgba(4, 135, 174, 1) 0%,rgba(63, 132, 188, 1) 100%);
+	background : -webkit-linear-gradient(0deg, rgba(4, 135, 174, 1) 0%, rgba(63, 132, 188, 1) 100%);
+	background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(4, 135, 174, 1) ),color-stop(1,rgba(63, 132, 188, 1) ));
+	background : -o-linear-gradient(0deg, rgba(4, 135, 174, 1) 0%, rgba(63, 132, 188, 1) 100%);
+	background : -ms-linear-gradient(0deg, rgba(4, 135, 174, 1) 0%, rgba(63, 132, 188, 1) 100%);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#0487AE', endColorstr='#3F84BC' ,GradientType=0)";
+	background : linear-gradient(90deg, rgba(4, 135, 174, 1) 0%, rgba(63, 132, 188, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0487AE',endColorstr='#3F84BC' , GradientType=1);
+	height: 97px;
+
+	border-bottom: solid;
+	border-bottom-color: #fff;
+	border-bottom-width: 6px;
+	width: 100%;
+	z-index: 2000;
+	@import "topo/menu";
+	.logo{
+		background: image-url("logo.png");
+		height: 212px;
+		width: 354px;
+		margin-left: -13px;
+		z-index: 10;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+	@media only screen and (max-width: 767px){
+		.logo{
+			margin: 0 auto;
+			height: 145px;
+			width: 243px;
+			background-size: 100%;
+		}
+	}
+	.atendimento{
+		color: #FFFFFF;
+		font-family: 'Arista Light';
+		font-size: 15pt;
+		text-align: center;
+		margin-top: 10px;
+		text-rendering: optimizeLegibility;
+		.fixo{
+			margin-bottom: -5px;
+		}
+		.radio{
+			margin-bottom: -7px;
+		}
+		.email{
+			margin-bottom: -5px;
+		}
+	}
+
+}

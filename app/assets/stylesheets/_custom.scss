@@ -1,0 +1,175 @@
+// Your custom SCSS should be written here...
+@import "compass/css3";
+
+body{
+}
+.centro{
+	background: image-url("bg.jpg") 100%;
+	background-attachment: fixed !important;
+}
+@import "paths/topo";
+h1.titulo-desenvolvimento{
+	text-align: center;
+	color: #fff;
+	@include text-shadow(#160404 3px 3px 21px);
+	margin-bottom: -46px;
+}
+
+@import "paths/formulario";
+.nacionais{
+	background: #ffF;
+	width: 100%;
+	min-height: 300px;
+	h2{
+		font-family: 'Arista Light';
+		font-size: 24pt;
+		span{
+			color: #178E88;
+		}
+	}
+}
+@import "paths/box";
+
+.parallax {
+	background-image: url(http://gumbyframework.com/img/img_parallax_demo.jpg);
+	background-attachment: fixed !important;
+}
+
+
+.heade-destinos{
+	height: 300px;
+	background: image-url("rio.jpg") 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	.corpo{
+		width: 300px;
+		background: white;
+		height: 98px;
+		padding-left: 22px;
+		padding-top: 0px;
+		border-radius: 10px 10px 44px 19px;
+		margin-top: 123px;
+		h1{
+			font-size: 33pt;
+			margin-bottom: -17px;
+			font-weight: bold;
+			font-family: 'Arista Light';
+		}
+		span{
+			font-style: italic;
+			font-family: 'Arista Light';
+			font-size: 20px;
+		}
+		span.hashtag{
+
+		}
+
+	}
+}
+@media only screen and (max-width: 767px){
+	.heade-destinos{
+		background-position: center;
+		height: 186px;
+		margin-bottom: 24px;
+	}
+	.voltar{
+		i{
+			font-size: 15pt;
+		}
+	}
+}
+
+.info-destinos{
+	p{
+		padding-left: 20px;
+		font-size: 13px;
+		text-align: justify;
+	}
+}
+
+
+@media only screen and (max-width: 767px){
+	.ocultar-celular{
+		display: none;
+	}
+	.box{
+		margin: 0 auto;
+	}
+}
+
+.grid-3-2-1 {
+	@include fancytiles(3,2,1, $min-device-width, '650px', $row-max-width); 
+	padding-left: 0px;
+}
+.uploadBox{
+	@include fancytiles(4,3,2);
+	min-height: 350px;
+	max-width: 350px;
+	height: auto;
+}
+
+.grid-2-2-2 {
+	width: 50%;
+	float: left;
+}
+.grid-3-3-3{
+	width: 33%;
+	float: left;
+}
+@media (min-width: 770px) { 
+	.nao-mostra-pc{
+		display: none;
+	}
+}
+
+.destino-texto{
+	padding-top: 15px;
+}
+.titulo-destino{
+	margin-top: -30px;
+}
+.site-destino{
+
+	height: 230px;
+	h2{
+		font-weight: bold;
+		margin-bottom: -12px;
+		text-shadow: 2px 4px 7px rgba(26, 0, 0, 0.78);
+		color: #FFFDFD;
+	}
+	span.desc{
+		text-shadow: 2px 4px 7px rgba(26, 0, 0, 0.78);
+		color: #FFFDFD;
+		background: rgba(0, 0, 0, 0.25);
+		font-weight: bold;
+		padding: 5px 5px 5px 5px;
+	}
+}
+img.left {
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+.destino-texto p{
+	font-size: 0.9rem;
+}
+.destino-t1{
+	margin-top: 3px;
+	margin-bottom: -19px;
+}
+.destino-texto p.subir{
+	margin-top: -15px;
+}
+
+@media only screen and (max-width: 767px){
+
+	 .titulo-destino {
+	 	margin-top: 52px;
+	 }
+}
+
+
+@import "paths/_upload";
+@import "paths/_footer";
+@import "paths/_formulario-mobile";

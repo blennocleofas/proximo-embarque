@@ -1,0 +1,146 @@
+<div class="row">
+	<div class="twelve columns">
+		<section class="tabs">
+
+		    <ul class="tab-nav">
+		        <li class="active"><a href="#">Principal</a></li>
+		        <li> <a href="#">Conteúdo</a></li>
+		    </ul>
+
+		    <div class="tab-content active">
+		        <div class="seven columns">
+
+		        	<%= form_for @destino do |d| %>
+		        	<% if @destino.errors.any? %>
+		        	  <div id="error_explanation">
+		        	    <h2><%= pluralize(@destino.errors.count, "error") %> prohibited
+		        	      this post from being saved:</h2>
+		        	    <ul>
+		        	    <% @destino.errors.full_messages.each do |msg| %>
+		        	      <li><%= msg %></li>
+		        	    <% end %>
+		        	    </ul>
+		        	  </div>
+		        	  <% end %>
+
+		        	<h4> <i class="icon-info"></i>nformações Principais</h4>
+		        	<ul>
+		        	  <li class="field" >
+		        	    <%= d.text_field :title, class: "input", placeholder: "Titulo do Destino",
+		        	    :'ng-model'=>'titulo', :'ng-init'=> "titulo='#{@destino.title}'" %>
+		        	    
+		        	  </li>
+		        	  <li class="field">
+		        	    <%= d.text_field :desc, 
+		        	    	class: "input",
+		        	    	placeholder: "Descrição do Destino",
+		        	    	:'ng-model'=>'desc', :'ng-init'=> "desc='#{@destino.desc}'"
+		        	    	%>
+		        	  </li>
+		        	  <li class="field">
+		        		  <%= d.text_field :tipo,
+		        		  placeholder: "Categoria do Destino ",
+		        		  class: "input"  %>
+		        	  </li>
+		        	  <li class="field">
+		        	    <%= d.text_field :cidade, class: "wide input", placeholder: "Cidade do Destino", 
+		        	    :'ng-model'=>'cidade', :'ng-init'=> "cidade='#{@destino.cidade}'"  %>
+		        	    <%= d.text_field :dias, class: 'narrow input', placeholder: 'Dias' ,
+		        	    :'ng-model'=>'dias', :'ng-init'=> "dias='#{@destino.dias}'"  %>
+		        	  </li>
+
+		        	</ul>
+		        		<h4> <i class="icon-plus"></i>Informações</h4>
+		        	<ul>
+		        		<li class="field">
+		        			<%= d.text_field :sinfo_title, class: "input", placeholder: "Titulo + info", :'ng-model'=>'sinfo_title', 
+		        			:'ng-init'=> "sinfo_title='#{@destino.sinfo_title}'" %>
+		        		</li>
+		        		<li class="field">
+		        			<%= d.text_field :sinfo_subtitle, class: "input", placeholder: "Subitilulo",  :'ng-model'=>'sinfo_subtitle',
+		        			:'ng-init'=> "sinfo_subtitle='#{@destino.sinfo_subtitle}'" %>
+		        		</li>
+		        		<li class="field">
+		        			<%= d.text_field :sinfo_categoria, class: "input", placeholder: "Categorias",:'ng-init'=> "sinfo_categoria='#{@destino.sinfo_categoria}'" %>
+		        		</li>
+		        		<li class="field">
+		        			<%= d.text_field :sinfo_price, class: "input", placeholder: "Preço por Pessoa",:'ng-model'=> "sinfo_price", :'ng-init'=> "sinfo_price='#{@destino.sinfo_price}'"%>
+		        		</li>
+		        		<li class="field">
+		        			<%= d.text_area  :sinfo_desc,  :'ng-model'=> "sinfo_desc", style: "height: 132px !important;", class: "input text", placeholder: "Descrição Resumida",:'ng-init'=> "sinfo_desc='#{@destino.sinfo_desc}'"
+		        			%>
+		        		</li>
+		        	</ul>
+		        	<div class="pct">
+		        		<%= d.hidden_field :pacotes_selecionados %>
+		        	</div>
+
+		        	<div class="pretty medium default btn">
+		        		<%= d.submit "Salvar"%>
+		        	</div>
+		        	
+		        	
+		        </div>
+		        <div class="five columns">
+		        	<div class="box" style="margin-top: 16px;" >
+		        		<div class="sobre">
+		        			<hgroup>
+		        				<h4>{( titulo )}</h4>
+		        				<h2>{( desc )}</h2>
+		        			</hgroup>
+		        			<figure>
+		        				<img alt="Cidade #12" height="195" src="http://a3.res.cloudinary.com/blenno/image/upload/c_fill,h_195,w_306/a3b118ff539e5611547b0858_yd6jl0.jpg" width="306">
+		        				<figcaption class="trait-bar tb-3">
+		        					<span class="body">Body</span>
+		        					<span class="soul">Soul</span>
+		        					<span class="mind">Mind</span>
+		        				</figcaption>
+		        			</figure>
+		        			<div class="dl">
+		        				<dd class="local"><i class="icon-map"></i>{( cidade )}</dd>
+		        				<dt class="duracao"><i class="icon-layout"></i>{( dias )} Dias</dt>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="box mostrar" style="margin-top: -28px;">
+		        		<div class="mais-sobre">
+		        			<hgroup>
+		        				<h3>{( sinfo_title )}</h3>        
+		        				<h4>{( sinfo_subtitle )}</h4>      
+		        			</hgroup>
+		        			<div class="voltar"><i class="icon-reply-all"></i></div>
+
+		        			<div class="favoritar" data-id="25">
+		        				<i class="icon-star-empty"></i>
+		        			</div>
+
+		        			<ul class="traits">
+		        				<li class="trait-emblem small body uk-badge"><span>Pacote</span></li>
+		        				<li class="trait-emblem small body uk-badge uk-badge-danger"><span>Promoçao</span></li>
+		        			</ul>
+		        			<p class="price">{(sinfo_price | currency )} preço por pessoa</p>
+		        			<p>
+		        				{(sinfo_desc)}
+		        			</p>
+		        		</div>
+		        	</div>
+		        </div>
+		    </div>
+		    <div class="tab-content">
+		    	<ul>
+		    		<li class="field">
+		        <%= d.text_area  :full_text,  :'ng-model'=> "full_text", style: "height: 132px !important;", class: "input text ckeditor", placeholder: "Descrição Resumida",:'ng-init'=> "full_text='#{@destino.full_text}'"
+		        			%>
+		        	</li>
+		       </ul>
+		       	<%= cl_image_upload_tag(:image_id, :html => { :multiple => true,:class => "image_upload" }) %>
+		    </div>
+		<% end %>
+		</section>
+	</div>
+</div>
+<div class="row">
+
+
+</div>
+

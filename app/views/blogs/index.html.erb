@@ -1,0 +1,30 @@
+<%= render "layouts/top_adm" %>
+<div class="row">
+<section class="twelve columns">
+	<h2>Lista de Posts</h2>
+	
+	<table class="striped rounded">
+		<thead>
+			<thead>
+				<tr>
+					<th>#Titulo</th>
+					<th>#Conteudo</th>
+					<th>#Ações</th>
+				</tr>
+			</thead>
+		</thead>
+		<tbody>
+			<% @blog.each do |b| %>
+			<tr>
+				<td><%= b.titulo %></td>
+				<td><%=  raw(b.conteudo) %></td>
+				<td>Editar | Apagar</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<div class="medium primary btn icon-right entypo icon-plus">
+		<%= link_to 'Novo Post', new_blog_path %>
+	</div>
+</section>
+</div>

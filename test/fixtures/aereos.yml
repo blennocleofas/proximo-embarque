@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  voo_numero: MyString
+  cia: MyString
+  ida: MyString
+  volta: MyString
+  detalhes: MyString
+  tarifa: MyString
+  taxa: MyString
+
+two:
+  voo_numero: MyString
+  cia: MyString
+  ida: MyString
+  volta: MyString
+  detalhes: MyString
+  tarifa: MyString
+  taxa: MyString

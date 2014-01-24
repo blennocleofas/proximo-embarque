@@ -1,0 +1,46 @@
+<%= render "layouts/top_adm" %>
+
+<div class="row">
+  <div class="twelve columns">
+    <h4>Step 2 Pacotes</h4>
+
+
+    <table class="striped rounded">
+     <thead>
+      <tr>
+       <th> Titulo do Pacote </th>
+       <th class="center"> Dias </th>
+       <th class="center"> Noites </th>
+       <th> Saindo de: </th>
+       <th> Voltado de: </th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @pacotes.each do |pa| %>
+     <tr>
+       <td><%= pa.titulo %></td>
+       <td class="center" ><%= pa.dias %></td>
+       <td class="center"><%= pa.noites %></td>
+       <td><%= pa.cidade_origem %> - (<%= pa.aeroporto_ori %>) </td>
+       <td><%= pa.cidade_destino %> - (<%= pa.aeroporto_dest %>) </td>
+     </tr>
+     <% end %>
+   </tbody>
+ </table>
+
+ <div class="teste">
+  <% form_tag :action=>"approve" do %>
+  
+  <% end %>
+</div>
+<div class="acoes-pacote">
+  <p class="btn primary medium"><a href="#" class="switch" gumby-trigger="#pacotes">Selecionar Pacotes</a></p>
+  <div class="medium secondary btn icon-left entypo icon-plus">
+    <a href="#" class="switch" gumby-trigger="#novo" >Cadastrar Novo Pacote</a>
+  </div>
+</div>
+</div>
+</div>
+
+<%= render "table_pacotes" %>
+<%= render "cadastrar_pacotes" %>

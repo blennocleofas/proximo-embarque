@@ -1,0 +1,17 @@
+<h1>Upload de Fotos</h1>
+<%= cl_image_upload_tag(:image_id,
+	:tags => "galeria_destinos", 
+	:html => { :multiple => true,
+	:class => "up_upload" })
+	 %>
+<button id="up_btn">Upload</button>
+<div class="preview">
+
+</div>
+
+<div id="uploadFilesBox"></div>
+
+<div class="fotos">
+	<div class="tags"></div>
+</div>
+<div id="content"></div>

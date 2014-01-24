@@ -1,0 +1,40 @@
+<%= render "layouts/top_adm" %>
+<div class="row">
+<section class="twelve columns">
+
+<div data-target="grid-fundamentals">
+	<h2>Gerenciar Destinos</h2>
+
+<table class="striped rounded">
+	<thead >
+		<tr>
+			<th>#ID</th>
+			<th>#Titulo</th>
+			<th>#Cidade</th>
+			<th>#Acões</th>
+		</tr>
+	</thead>
+	<tbody>
+			<% @destinos.each do |d| %>
+		<tr>
+			<td><%= link_to d.id, destino_path(d) %></td>
+			
+			<td><%= d.title %></td>
+			<td><%= d.cidade %></td>
+			<td><%= link_to "Editar", edit_destino_path(d)%> | 
+				<%= link_to "Apagar", destino_path(d),
+                    method: :delete, data: { confirm: 'Tem certeza?' }%> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+	<div class="medium primary btn icon-right entypo icon-plus">
+		<%= link_to 'Novo Destino', new_destino_path %>
+	</div>
+</div>
+
+<div class="pagina">
+	<%= will_paginate @destinos %>
+</div>
+</section>
+</div>

@@ -1,0 +1,34 @@
+.nav-top{
+	padding-top: 30px;
+	ul{
+		list-style:none;
+		li{
+
+			display: inline; 
+			a{
+				color: #FFFFFF;
+				font-family: 'Arista Light';
+				font-size: 15pt;
+				margin-right: 4px;
+				text-rendering: optimizeLegibility;
+			}
+		}
+
+	}
+}
+.current{
+	a:hover{
+		border-bottom: solid 2pt;
+	}
+	a{
+		border-bottom: solid 2pt;
+	}
+}
+
+.nav-mobile{
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	margin-top: 31px;
+	color: #fff;
+}

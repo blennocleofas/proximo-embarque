@@ -1,0 +1,30 @@
+<div class="row">
+ <div class="centered six columns">
+	<h2>Acesso Administrativo</h2>
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<ul>
+		  <li class="field">
+		    <%= f.email_field :email, class: "input", placeholder: t(".email") %>
+		  </li>
+		  <li class="field">
+		    <%= f.password_field :password, class: "password input", placeholder: t(".password") %>
+		  </li>
+		  <% if devise_mapping.rememberable? -%>
+		  <li class="field">
+		  	<label class="checkbox" for="check2">
+		  	    <%= f.check_box :remember_me, id: "check2" %>
+		  	    <span></span> <%= t(".rem")%>
+		  	  </label>
+		  </li>
+		  <% end %>
+		  <li>
+		  	<div class="pretty medium default btn">
+		  		<input type="submit" value="Login" />
+		  	</div>
+		  </li>
+		</ul>
+	<% end %>
+ </div>
+</div>
+
+<% render "devise/shared/links" %>

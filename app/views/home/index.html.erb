@@ -1,0 +1,60 @@
+<% title "Proximo Embarque" %>
+<div class="comprar">
+	<div class="modal" id="buscar-origem-m">
+		<div class="content">
+			<a class="close switch" gumby-trigger="|#buscar-origem-m"><i class="icon-cancel" /></i></a>
+			<div class="row">
+				<div class="ten columns centered text-center">
+					<h2>Buscar Origem</h2>
+					input
+					<p class="btn primary medium">
+						<a href="#" class="switch" gumby-trigger="|#buscar-origem-m">Fechar Busca</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="buscar-destino-m">
+		<div class="content">
+			<a class="close switch" gumby-trigger="|#buscar-destino-m"><i class="icon-cancel" /></i></a>
+			<div class="row">
+				<div class="ten columns centered text-center">
+					<h2>Buscar Destinos</h2>
+					<input class="xwide email input" type="email" placeholder="xwide input" />
+					<p class="btn primary medium">
+						<a href="#" class="switch" gumby-trigger="|#buscar-destino-m">Fechar Busca</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="menu-t"></div>
+<div class="site">
+	<%= render 'layouts/topo'%>
+	<div class="centro" >
+		<div class="row">
+			<%= render :partial => 'formulario_busca' %>
+		</div>
+
+				<div class="six columns">
+				</div>
+			</div>
+		</div>
+		
+		<%= render :partial => 'box_nacionais'%>
+		<%= render :partial => 'box_internacionais'%>
+
+	</div>
+	<div class="user">
+		  <% if current_user %>
+		  Olá <%= current_user.name %>
+		  <% else %>
+		   Fazer Login Novamente
+		  <% end %>
+	</div>
+<footer class="footer">
+	<div class="row"></div>
+</footer>

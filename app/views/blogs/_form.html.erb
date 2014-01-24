@@ -1,0 +1,14 @@
+	<h3> <i class="icon-folder"></i> Cadastrar Novo Post do Blog</h3>
+	<%= form_for @blog do |f| %>
+	<ul>
+		<li class="field">
+			<%= f.text_field :titulo, class: "input", placeholder: "TItulo da Publicação" %>
+		</li>
+		<li class="field">
+			<%= f.text_area :conteudo, class: "input text ckeditor" %>
+		</li>
+		<div class="pretty medium default btn">
+			<%= f.submit "Cadastrar Novo" %>
+		</div>
+	</ul>
+	<% end %>

@@ -1,0 +1,34 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+DB 
+export DB_BD="dbname"
+export DB_HOST="dbhost"
+export DB_PORT=dbport
+export DB_USER="dbuser"
+export DB_PASS="dbpass"
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

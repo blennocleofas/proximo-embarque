@@ -1,0 +1,45 @@
+<nav id="navbar-main-nav" class="navbar">
+  <div class="row">
+    <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
+    <h1 class="tree columns logo">
+      <a href="<%= url_for webapp_path() %>">
+        <div style="width: 213px;"></div>
+      </a>
+    </h1>
+    <nav class="nine columns pull_right">
+      <ul id="main-nav">
+        <li><a href="/features/"><span>Gerenciar </span><i class="icon-archive" title="Features"></i></a>
+          <div class="dropdown">
+            <ul>
+              <li><%= link_to "Destinos", destinos_path %></li>
+              <li><%=  link_to "Blog",  blogs_path %></li>
+              <li><a href="/features/ui-kit/">Pacotes</a></li>
+              <li><a href="/features/toggles-switches/">Chamados</a></li>
+              <li><a href="/features/fancy-tiles/">Atendimentos</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="/docs/"><span>Documentação </span><i class="icon-doc-text" title="Documentation"></i></a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="/docs/">Como Cadastrar Destinos</a></li>
+              <li><a href="/docs/claymate/">Como Cadastrar Pacotes</a></li>
+              <li><a href="/docs/grid/">Gerenciar Chamados</a></li>
+              <li><a href="/docs/ui-kit/">Gerenciar Atendimentos</a></li>
+              <li><a href="/docs/components/">Envio de Imagens</a></li>
+              <li><a href="/docs/extensions/">Dicas - Conteudo Resposive</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="http://gumbyframework.com/customize"><span>Configurar </span><i class="icon-cog" title="Customize"></i></a></li>
+        <li><a href="https://plus.google.com/communities/108760896951473344451" target="_blank"><span>Comunicação </span><i class="icon-chat" title="community"></i></a></li>
+        <li>
+          <p class="medium pretty default btn icon-reply-all icon-left">
+            <%= link_to "Sair", destroy_admin_session_path, method: :delete  %>
+          </p>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>

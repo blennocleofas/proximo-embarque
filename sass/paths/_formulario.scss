@@ -1,0 +1,272 @@
+$tamanho-locais: 189px;
+$font-form-input: 14pt;
+
+.formulario-reserva{
+	min-height: 477px;
+	
+	.f-pc{
+	background: image-url("form.png");
+	width: 520px;
+	padding-top: 95px;
+	padding-left: 53px;
+	position: relative;
+	height: 469px;
+	.seta{
+		background: image-url("seta.png");
+		width: 106px;
+		height: 133px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-right: 90px;
+		margin-top: -81px;
+		z-index: 1;
+	}
+	.titulo{
+		h1{
+			font-size: 24pt;
+			font-family: 'Arista Light';
+			span{
+				color: #097F7C;
+			}
+		}
+	}
+	.opt-1{
+		li.field{
+		list-style: none;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+				span{
+					.icon-dot{
+						font-size: 46px;
+					}
+				}
+			}
+		}
+
+	}
+	.locais{
+		float: left;
+		.origem{
+			float: left;
+			width: $tamanho-locais;
+			
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				font-family: 'Arista Light';
+				font-size: $font-form-input;
+				background: none;
+				border: none;
+				border-bottom: solid 1px;
+				outline: none;
+			}
+		}
+		.destino{
+			float: left;
+			width: $tamanho-locais;
+
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				font-family: 'Arista Light';
+				font-size: $font-form-input;
+				background: none;
+				border: none;
+				border-bottom: solid 1px;
+				outline: none;
+			}
+		}
+	}
+
+
+	.datas{
+		float: left;
+		.data-ida{
+			float: left;
+			width: $tamanho-locais;
+			position: relative;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				font-family: 'Arista Light';
+				font-size: $font-form-input;
+				background: none;
+				border: none;
+				border-bottom: solid 1px;
+				outline: none;
+			}
+			i{
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin-right: 12px;
+				margin-top: 28px;
+			}
+
+		}
+		.data-volta{
+			float: left;
+			width: $tamanho-locais;
+			position: relative;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				font-family: 'Arista Light';
+				font-size: $font-form-input;
+				background: none;
+				border: none;
+				border-bottom: solid 1px;
+				outline: none;
+			}
+			i{
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin-right: 12px;
+				margin-top: 28px;
+			}
+
+		}
+	}
+
+	.pessoas{
+		float: left;
+		margin-top: 10px;
+		.adultos{
+			position: relative;
+			float: left;
+			margin-right: 30px;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				border: none;
+				outline: none;
+				width: 24px;
+				font-size: $font-form-input - 1;
+				text-align: center;
+			}
+			.aumentar{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 98px;
+				margin-top: 5px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Up-4-icon.png");
+				background-size: 100%;
+			}
+			.diminuir{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 98px;
+				margin-top: 13px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Down-4-icon.png");
+				background-size: 100%;
+
+			}
+			
+		}
+		.criancas{
+			position: relative;
+			float: left;
+			margin-right: 30px;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				border: none;
+				outline: none;
+				width: 24px;
+				font-size: $font-form-input - 1;
+				text-align: center;
+			}
+			.aumentar{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 103px;
+				margin-top: 5px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Up-4-icon.png");
+				background-size: 100%;
+			}
+			.diminuir{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 103px;
+				margin-top: 13px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Down-4-icon.png");
+				background-size: 100%;
+
+			}
+		}
+		.bebes{
+			position: relative;
+			float: left;
+			margin-right: 30px;
+			label{
+				font-family: 'Arista Light';
+				font-size: 15pt;
+			}
+			input{
+				border: none;
+				outline: none;
+				width: 24px;
+				font-size: $font-form-input - 1;
+				text-align: center;
+			}
+			.aumentar{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 82px;
+				margin-top: 5px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Up-4-icon.png");
+				background-size: 100%;
+			}
+			.diminuir{
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 82px;
+				margin-top: 13px;
+				height: 10px;
+				width: 10px;
+				background: url("http://icons.iconarchive.com/icons/visualpharm/ios7v2/16/Arrows-Down-4-icon.png");
+				background-size: 100%;
+
+			}
+		}
+	}
+	.final{
+		clear: both;
+		padding-top: 12px;
+		.btn.secondary, .skiplink.secondary{
+			background: #168E8B;
+		}
+	}
+}
+}

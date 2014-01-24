@@ -1,0 +1,85 @@
+
+		<div class="nacionais">
+			<div class="row">
+				<div class="twelve columns">
+					<h2><span>Destinos</span> Internacionais</h2>
+				</div>
+				<dir class="row">
+					<% @destinos_internacionais.each do |destinos| %>
+					<div class="grid-3-2-1">
+						<div class="box">
+							<div class="sobre">
+								<hgroup>
+									<h4>
+										<a href="<%= url_for inicio_destino_path(destinos) %>" style="color: #787876 !important;">
+											<%= destinos.title %>
+										</a>
+									</h4>
+									
+									<h2>
+										<a href="<%= url_for inicio_destino_path(destinos) %>">
+											<%= destinos.desc %>
+										</a>
+									</h2>
+
+								</hgroup>
+								<figure>
+									<%= cl_image_tag(destinos.fotoid, 
+					                    :alt => destinos.cidade, 
+					                    :width => 306, 
+					                    :height => 195,
+					                    :format => 'jpg',
+					                    :crop => :fill,
+					                    :fetch_format => :auto)  %>
+									<figcaption class="trait-bar tb-3">
+										<span class="body">Body</span>
+										<span class="soul">Soul</span>
+										<span class="mind">Mind</span>
+									</figcaption>
+								</figure>
+								<div class="dl">
+									<dd class="local"><i class="icon-map"></i> <%= destinos.cidade %></dd>
+									<dt class="duracao"><i class="icon-layout"></i><%= destinos.dias %> Dias</dt>
+								</div>
+							</div>
+							<div class="info">Saiba Mais</div>
+							<div class="mais-sobre">
+								<hgroup>
+									<h3>
+										<a href="<%= url_for inicio_destino_path(destinos) %>">
+											<%= destinos.sinfo_title %>
+										</a>
+									</h3>        
+									<h4>
+										<%= destinos.sinfo_subtitle %>
+									</h4>      
+								</hgroup>
+								<div class="voltar"><i class="icon-reply-all"></i></div>
+								<div class="favoritar" data-id="<%= destinos.id %>" >
+									<% if destino_favorito(destinos) %>
+										<i class="icon-star"></i>
+									<% else %>
+									<i class="icon-star-empty"></i>
+									<% end %>
+								</div>
+								<ul class="traits">
+									<li class="trait-emblem small body uk-badge"><span><%= destinos.sinfo_tipo %></span></li>
+									<li class="trait-emblem small body uk-badge uk-badge-danger"><span><%= destinos.sinfo_categoria %></span></li>
+								</ul>
+								<p class="price">
+									<a href="<%= url_for inicio_destino_path(destinos) %>">
+										R$ <%= destinos.sinfo_price %> preço por pessoa</p>
+									</a>  
+								<p>
+									<a href="<%= url_for inicio_destino_path(destinos) %>">
+									<%= destinos.sinfo_desc %> 
+									</a>  
+								</p>
+							</div>
+						</div>
+					</div>
+					<% end %>
+				</dir>
+
+			</div>
+		</div>

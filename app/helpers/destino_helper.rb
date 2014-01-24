@@ -1,0 +1,2 @@
+module DestinoHelper
+end

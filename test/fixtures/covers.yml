@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  img: MyString
+  x: MyString
+  'y': MyString
+  h: MyString
+  w: MyString
+  destino_id: 
+
+two:
+  img: MyString
+  x: MyString
+  'y': MyString
+  h: MyString
+  w: MyString
+  destino_id: 

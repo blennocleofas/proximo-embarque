@@ -1,0 +1,45 @@
+<div id="user-widget">
+  <% if current_user %>
+    <%= image_tag(current_user.foto, :alt => "Foto Perfil") %>
+    <br>
+    Olá <strong><%= current_user.name %></strong>!
+    <%= link_to "Sair", signout_path, id: "sign_out" %>
+    <br>
+    Email: <strong><%= current_user.email %></strong>
+    <br>
+    Local: <strong><%= current_user.local %></strong>
+    <br>
+    Sexo: <strong><%= sexo_face current_user.sexo %></strong>
+    <br>
+    Cadastro no nosso site: <strong><%= create_date current_user.created_at %></strong>
+    <br>
+    Uid Facebook: <strong><%= current_user.uid %></strong>
+    <br>
+    Id Site: <strong><%= current_user.id %></strong>
+    <br>
+    Fonte: <strong><%= current_user.provider %></strong>
+    <br>
+    Data Nascimento: <strong><%=  aniversario_face current_user.datanasc %></strong>
+
+    <br>
+    <h4>Favoritos Destinos Nacionais</h4>
+    <% current_user.destinos.all_nacionais.each do |favoritos|%>
+        <%= favoritos.title %>
+    <% end %>
+    <br>
+    <h4>Favoritos Destinos Internacionais</h4>
+    <% current_user.destinos.all_internacionais.each do |favoritos|%>
+        <%= favoritos.title %>
+    <% end %>
+
+
+  <% else %>
+    <%= link_to "Entrar Usando o Facebook", "/auth/facebook", id: "sign_in" %>
+  <% end %>
+  <%= cl_image_tag("a3b118ff539e5611547b0858_yd6jl0.jpg", 
+                    :alt => "Sample Image", 
+                    :width => 306, 
+                    :height => 195, 
+                    :crop => :fill) 
+    %>
+</div>

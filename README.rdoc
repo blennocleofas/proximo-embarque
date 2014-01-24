@@ -12,9 +12,13 @@ Things you may want to cover:
 * Configuration
 DB 
 export DB_BD="dbname"
+
 export DB_HOST="dbhost"
+
 export DB_PORT=dbport
+
 export DB_USER="dbuser"
+
 export DB_PASS="dbpass"
 
 * Database creation

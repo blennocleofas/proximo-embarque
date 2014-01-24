@@ -1,6 +1,0 @@
-http://shout.setfive.com/2012/08/09/custom-templates-with-jquery-file-upload/
-
-#Manipulando Pop-Ups
-var myWindow = window.open("","myWindow","width=200,height=100");    // Opens a new window
-myWindow.document.write("<p>This is 'myWindow'</p>");                // Text in the new window
-myWindow.opener.document.write("<p>This is the source window!</p>"); // Text in the window that created the new window
